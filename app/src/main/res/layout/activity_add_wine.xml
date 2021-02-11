@@ -4,10 +4,441 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/White_Background">
     tools:context=".addWineActivity">
 
+    <Button
+        android:id="@+id/aw_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="@font/poppins_light"
+        android:onClick="addWine"
+        android:text="Ajouter Bouteille(s)"
+        android:textAlignment="center"
+        android:textColor="@color/White_Text"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/aw_text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:maxEms="5"
+        android:text="@string/aw_wine_name"
+        android:textAlignment="center"
+        android:textColor="@color/Black_Text"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/aw_card_name"
+        app:layout_constraintEnd_toEndOf="@+id/aw_card_name"
+        app:layout_constraintStart_toStartOf="@+id/aw_card_name" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/aw_card_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@id/aw_text_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/aw_edit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:ems="6"
+            android:fontFamily="@font/poppins_light"
+            android:hint="name"
+            android:lines="1"
+            android:maxEms="6"
+            android:text="@string/w_default_empty"
+            android:textAlignment="center"
+            android:textColor="@color/White_Text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/aw_text_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:maxEms="5"
+        android:text="@string/aw_wine_type"
+        android:textAlignment="center"
+        android:textColor="@color/Black_Text"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/aw_card_type"
+        app:layout_constraintEnd_toEndOf="@+id/aw_card_type"
+        app:layout_constraintStart_toStartOf="@+id/aw_card_type" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/aw_card_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@id/aw_text_sender"
+        app:layout_constraintEnd_toStartOf="@+id/aw_card_maker"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aw_card_name"
+        app:layout_constraintVertical_bias="0.59000003">
+
+        <TextView
+            android:id="@+id/aw_edit_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:ems="6"
+            android:fontFamily="@font/poppins_light"
+            android:lines="1"
+            android:maxEms="6"
+            android:text="@string/w_default_empty"
+            android:textAlignment="center"
+            android:textColor="@color/White_Text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/aw_text_maker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:maxEms="5"
+        android:text="@string/aw_wine_maker"
+        android:textAlignment="center"
+        android:textColor="@color/Black_Text"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/aw_card_maker"
+        app:layout_constraintEnd_toEndOf="@+id/aw_card_maker"
+        app:layout_constraintStart_toStartOf="@+id/aw_card_maker" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/aw_card_maker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/aw_card_type"
+        app:layout_constraintTop_toTopOf="@+id/aw_card_type" >
+
+        <TextView
+            android:id="@+id/aw_edit_maker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:ems="6"
+            android:fontFamily="@font/poppins_light"
+            android:lines="1"
+            android:maxEms="6"
+            android:text="@string/w_default_empty"
+            android:textAlignment="center"
+            android:textColor="@color/White_Text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/aw_text_sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:maxEms="5"
+        android:text="@string/aw_wine_sender"
+        android:textAlignment="center"
+        android:textColor="@color/Black_Text"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/aw_card_sender"
+        app:layout_constraintEnd_toEndOf="@+id/aw_card_sender"
+        app:layout_constraintStart_toStartOf="@+id/aw_card_sender" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/aw_card_sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@id/aw_h_number_barrier"
+        app:layout_constraintEnd_toStartOf="@+id/aw_card_region"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aw_card_type"
+        app:layout_constraintVertical_bias="0.65999997">
+
+        <TextView
+            android:id="@+id/aw_edit_sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:ems="6"
+            android:fontFamily="@font/poppins_light"
+            android:lines="1"
+            android:maxEms="6"
+            android:text="@string/w_default_empty"
+            android:textAlignment="center"
+            android:textColor="@color/White_Text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/aw_text_region"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:maxEms="5"
+        android:text="@string/aw_wine_region"
+        android:textAlignment="center"
+        android:textColor="@color/Black_Text"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/aw_card_region"
+        app:layout_constraintEnd_toEndOf="@+id/aw_card_region"
+        app:layout_constraintStart_toStartOf="@+id/aw_card_region" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/aw_card_region"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/aw_card_sender"
+        app:layout_constraintTop_toTopOf="@+id/aw_card_sender">
+
+        <TextView
+            android:id="@+id/aw_edit_region"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:ems="6"
+            android:fontFamily="@font/poppins_light"
+            android:lines="1"
+            android:maxEms="6"
+            android:text="@string/w_default_empty"
+            android:textAlignment="center"
+            android:textColor="@color/White_Text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/aw_text_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:maxEms="5"
+        android:text="@string/aw_wine_year"
+        android:textAlignment="center"
+        android:textColor="@color/Black_Text"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/aw_card_year"
+        app:layout_constraintEnd_toEndOf="@+id/aw_card_year"
+        app:layout_constraintStart_toStartOf="@+id/aw_card_year" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/aw_card_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        app:cardBackgroundColor="@color/White_Background"
+        app:layout_constraintBottom_toTopOf="@+id/aw_card_price"
+        app:layout_constraintEnd_toStartOf="@+id/aw_card_number"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/aw_edit_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="3"
+            android:fontFamily="@font/poppins_light"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="@color/Black_Text"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/aw_text_spoil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:fontFamily="@font/poppins_light"
+        android:maxEms="5"
+        android:text="@string/aw_wine_spoil"
+        android:textAlignment="center"
+        android:textColor="@color/Black_Text"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/aw_card_spoil"
+        app:layout_constraintEnd_toEndOf="@+id/aw_card_spoil"
+        app:layout_constraintStart_toStartOf="@+id/aw_card_spoil" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/aw_card_spoil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/White_Background"
+        app:layout_constraintBottom_toBottomOf="@+id/aw_card_year"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/aw_card_number">
+
+        <EditText
+            android:id="@+id/aw_edit_spoil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="3"
+            android:fontFamily="@font/poppins_light"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="@color/Black_Text"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/aw_text_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:maxEms="5"
+        android:text="@string/aw_wine_number"
+        android:textAlignment="center"
+        android:textColor="@color/Black_Text"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/aw_card_number"
+        app:layout_constraintEnd_toEndOf="@+id/aw_card_number"
+        app:layout_constraintStart_toStartOf="@+id/aw_card_number" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/aw_card_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/White_Background"
+        app:layout_constraintBottom_toBottomOf="@+id/aw_card_year"
+        app:layout_constraintEnd_toStartOf="@+id/aw_card_spoil"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/aw_card_year">
+
+        <EditText
+            android:id="@+id/aw_edit_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="3"
+            android:fontFamily="@font/poppins_light"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="@color/Black_Text"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/aw_text_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:maxEms="5"
+        android:text="@string/aw_wine_price"
+        android:textAlignment="center"
+        android:textColor="@color/Black_Text"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/aw_card_price"
+        app:layout_constraintEnd_toEndOf="@+id/aw_card_price"
+        app:layout_constraintStart_toStartOf="@+id/aw_card_price" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/aw_card_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        app:cardBackgroundColor="@color/White_Background"
+        app:layout_constraintBottom_toTopOf="@id/aw_h_confirm_barrier"
+        app:layout_constraintEnd_toStartOf="@+id/aw_card_rating"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/aw_edit_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="3"
+            android:fontFamily="@font/poppins_light"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="@color/Black_Text"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/aw_text_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:maxEms="5"
+        android:text="@string/aw_wine_rating"
+        android:textAlignment="center"
+        android:textColor="@color/Black_Text"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/aw_card_rating"
+        app:layout_constraintEnd_toEndOf="@+id/aw_card_rating"
+        app:layout_constraintStart_toStartOf="@+id/aw_card_rating" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/aw_card_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/White_Background"
+        app:layout_constraintBottom_toBottomOf="@+id/aw_card_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/aw_card_price">
+
+        <EditText
+            android:id="@+id/aw_edit_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="3"
+            android:fontFamily="@font/poppins_light"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="@color/Black_Text"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/aw_h_confirm_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="aw_confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="175dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/aw_h_number_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="aw_text_year"
+        tools:layout_editor_absoluteY="773dp" />
+
     <ImageView
-        android:id="@+id/am_background"
+        android:id="@+id/aw_background"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:translationZ="89dp"
@@ -16,10 +447,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/screen_background_dark_transparent" />
+        app:srcCompat="@color/White_Background" />
 
     <EditText
-        android:id="@+id/am_find_bar"
+        android:id="@+id/aw_find_bar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
@@ -40,60 +471,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/am_recycler"
+        android:id="@+id/aw_recycler"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:translationZ="90dp"
         android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintEnd_toEndOf="@+id/am_find_bar"
-        app:layout_constraintStart_toStartOf="@+id/am_find_bar"
-        app:layout_constraintTop_toBottomOf="@+id/am_find_bar"
+        app:layout_constraintEnd_toEndOf="@+id/aw_find_bar"
+        app:layout_constraintStart_toStartOf="@+id/aw_find_bar"
+        app:layout_constraintTop_toBottomOf="@+id/aw_find_bar"
         tools:listitem="@layout/wine_stats_card" />
 
-    <Button
-        android:id="@+id/am_buton_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="buttonClicked"
-        android:text="Name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/am_buton_type"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="buttonClicked"
-        android:text="Type"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/am_buton_name" />
-
-    <Button
-        android:id="@+id/am_buton_region"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="buttonClicked"
-        android:text="Region"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/am_buton_type" />
-
-    <Button
-        android:id="@+id/am_buton_sender"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="buttonClicked"
-        android:text="Sender"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/am_buton_region" />
-
-    <Button
-        android:id="@+id/am_buton_maker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="buttonClicked"
-        android:text="Maker"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/am_buton_sender" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#8E684E</color>
-    <color name="colorPrimaryDark">#5E422F</color>
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#08524B</color>
     <color name="colorAccent">#c17767</color>
     <color name="colorLightAccent">#D3B99F</color>
     <color name="colorDarkAccent">#210203</color>
@@ -22,6 +22,5 @@
     <color name="Wine_Sender_Background">#C468D3</color>
     <color name="White_Background">#E6E6E6</color>
 
-<!--    <color name="colorPrimary">#009688</color>-->
-<!--    <color name="colorPrimaryDark">#08524B</color>-->
+
 </resources>

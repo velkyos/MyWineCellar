@@ -20,7 +20,7 @@ import java.util.concurrent.Executors;
         EntityWineType.class,
         EntityWineRegion.class,
         EntityWineMaker.class,
-        EntityWineSender.class}, version = 1,exportSchema = true)
+        EntityWineSender.class}, version = 1)
 public abstract class WineDatabase extends RoomDatabase {
 
     private static final int NUMBER_OF_THREADS = 4;
@@ -57,12 +57,6 @@ public abstract class WineDatabase extends RoomDatabase {
                     masterDAO.insert(new EntityWineRegion("A Définir"));
                     masterDAO.insert(new EntityWineMaker("A Définir"));
                     masterDAO.insert(new EntityWineSender("A Définir"));
-
-                    masterDAO.insert(new EntityWine(true,5,1,1,1895,1,1,15,1,1,5));
-                    masterDAO.insert(new EntityWine(true,1,1,1,2405,1,1,142,1,1,4));
-                    masterDAO.insert(new EntityWine(false,0,1,1,2016,1,1,28,1,1,5));
-                    masterDAO.insert(new EntityWine(true,3,1,1,2034,1,1,96,1,1,0));
-                    masterDAO.insert(new EntityWine(true,2,1,1,1654,1,1,1,1,1,1));
                 }
             });
            // new PopulateDbAsyncTask(instance).execute();

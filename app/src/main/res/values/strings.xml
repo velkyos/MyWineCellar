@@ -35,10 +35,18 @@
         <item quantity="one">%d Bottle</item>
         <item quantity="other">%d Bottles</item>
     </plurals>
-    <string name="aw_find_text">Find ...</string>
-    <string name="aw_wine_name">Name :</string>
-    <string name="aw_wine_type">Type :</string>
-    <string name="aw_wine_Number">Name :</string>
+    <string name="aw_find_text">Find …</string>
+    <string name="aw_wine_name">Wine Name :</string>
+    <string name="aw_wine_type">Wine Type :</string>
+    <string name="aw_wine_number">Number of Bottles :</string>
+    <string name="aw_wine_year">Production Year :</string>
+    <string name="aw_wine_region">Production Region :</string>
+    <string name="aw_wine_maker">Wine Maker :</string>
+    <string name="aw_wine_sender">Bottle Origins :</string>
+    <string name="aw_wine_spoil">Spoiling Time :</string>
+    <string name="aw_wine_rating">Rating :</string>
+    <string name="aw_wine_price">Price :</string>
+    <string name="w_default_empty">To Define</string>
     <!--
     This string is used for square devices and overridden by hello_world in
     values-round/strings.xml for round devices.

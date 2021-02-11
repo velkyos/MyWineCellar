@@ -25,5 +25,16 @@
         <item quantity="one">%d Bouteille</item>
         <item quantity="other">%d Bouteilles</item>
     </plurals>
-    <string name="aw_find_text">Rechercher ...</string>
+    <string name="aw_find_text">Rechercher …</string>
+    <string name="aw_wine_name">Nom du Vin :</string>
+    <string name="aw_wine_type">Type de Vin :</string>
+    <string name="aw_wine_number">Nombre de Bouteilles :</string>
+    <string name="aw_wine_year">Année de Production :</string>
+    <string name="aw_wine_region">Région de Production :</string>
+    <string name="aw_wine_maker">Producteur :</string>
+    <string name="aw_wine_sender">Origine des Bouteilles :</string>
+    <string name="aw_wine_spoil">Nombre Année Consommable :</string>
+    <string name="aw_wine_rating">Avis :</string>
+    <string name="aw_wine_price">Prix :</string>
+    <string name="w_default_empty">À définir</string>
 </resources>

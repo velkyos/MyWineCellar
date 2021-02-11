@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">My Wine Cellar</string>
+    <string name="w_default_id" translatable="false"># 1246</string>
+    <string name="w_default_number" translatable="false">5 Bouteilles</string>
+    <string name="w_default_price" translatable="false">124 €</string>
+    <string name="w_default_name" translatable="false">Coteaux du Rhône</string>
+    <string name="w_default_type" translatable="false">Rouge</string>
+    <string name="w_default_maker" translatable="false">Arnaud Briday</string>
+    <string name="w_default_sender" translatable="false">Emmanuel Petit</string>
+    <string name="w_default_year" translatable="false">2018</string>
+    <string name="w_default_spoil" translatable="false">5 ans</string>
+    <string name="w_default_rating" translatable="false">4 Etoiles</string>
+    <string name="mm_button_description_add">Button to add Bottles</string>
+    <string name="mm_button_description_remove">Button to remove a Bottle</string>
+    <string name="mm_button_description_showlist">Button to show the list of wines</string>
+    <string name="w1_button_description_filter">Button to filter the wines list</string>
+    <string name="mm_button_text_add">Add Bottles</string>
+    <string name="mm_button_text_remove">Remove Bottle</string>
+    <string name="mm_button_text_showlist">Show Wine Cellar</string>
+    <string name="w_default_region" translatable="false">Bourgogne</string>
+    <string name="w1_button_text_filter">Apply Filter …</string>
+    <plurals name="ic_bottles_format">
+        <item quantity="zero">No Bottles \n into the cellar</item>
+        <item quantity="one">%d Bottle \n into the Cellar</item>
+        <item quantity="other">%d Bottles \n into the Cellar</item>
+    </plurals>
+    <plurals name="ic_rating_format">
+        <item quantity="zero">No Rating</item>
+        <item quantity="one">%d Star</item>
+        <item quantity="other">%d Stars</item>
+    </plurals>
+    <string name="ic_noprice">Unknown Price</string>
+    <plurals name="lc_bottles_format">
+        <item quantity="zero">No Bottles</item>
+        <item quantity="one">%d Bottle</item>
+        <item quantity="other">%d Bottles</item>
+    </plurals>
+    <string name="aw_find_text">Find ...</string>
+    <string name="aw_wine_name">Name :</string>
+    <string name="aw_wine_type">Type :</string>
+    <string name="aw_wine_Number">Name :</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+
+</resources>

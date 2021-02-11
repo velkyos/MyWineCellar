@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8E684E</color>
+    <color name="colorPrimaryDark">#5E422F</color>
+    <color name="colorAccent">#c17767</color>
+    <color name="colorLightAccent">#D3B99F</color>
+    <color name="colorDarkAccent">#210203</color>
+
+    <color name="black_overlay">#66000000</color>
+
+
+    <color name="White_Text">#FFFFFF</color>
+    <color name="Black_Text">#272727</color>
+    <color name="Red_Text">#ff5c33</color>
+
+    <color name="Yellow_Text">#FFCC00</color>
+
+    <color name="Wine_Name_Background">#ff5c33</color>
+    <color name="Wine_Type_Background">#99cc00</color>
+    <color name="Wine_Region_Background">#ffb84d</color>
+    <color name="Wine_Maker_Background">#5263C0</color>
+    <color name="Wine_Sender_Background">#C468D3</color>
+    <color name="White_Background">#E6E6E6</color>
+
+<!--    <color name="colorPrimary">#009688</color>-->
+<!--    <color name="colorPrimaryDark">#08524B</color>-->
+</resources>

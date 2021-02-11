@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Ma Cave à Vin</string>
+    <string name="mm_button_description_add">Bouton pour ajouter des Bouteilles</string>
+    <string name="mm_button_description_remove">Bouton Pour supprimer une Bouteille</string>
+    <string name="mm_button_description_showlist">Bouton Pour Afficher la liste des Bouteilles</string>
+    <string name="w1_button_description_filter">Bouton pour filtrer la liste</string>
+    <string name="mm_button_text_add">Ajouter Bouteilles</string>
+    <string name="mm_button_text_remove">Retirer Bouteille</string>
+    <string name="mm_button_text_showlist">Afficher la Cave à Vin</string>
+    <string name="w1_button_text_filter">Ajouter Filtres …</string>
+    <plurals name="ic_bottles_format" tools:ignore="UnusedQuantity">
+        <item quantity="zero">Aucune Bouteilles \n dans la Cave</item>
+        <item quantity="one">%d Bouteille \n dans la Cave</item>
+        <item quantity="other">%d Bouteilles \n dans la Cave</item>
+    </plurals>
+    <plurals name="ic_rating_format" tools:ignore="UnusedQuantity">
+        <item quantity="zero">Pas d\'Avis</item>
+        <item quantity="one">%d Étoile</item>
+        <item quantity="other">%d Étoiles</item>
+    </plurals>
+    <string name="ic_noprice">Prix Inconnu</string>
+    <plurals name="lc_bottles_format" tools:ignore="UnusedQuantity">
+        <item quantity="zero">Aucune Bouteilles</item>
+        <item quantity="one">%d Bouteille</item>
+        <item quantity="other">%d Bouteilles</item>
+    </plurals>
+    <string name="aw_find_text">Rechercher ...</string>
+</resources>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@color/White_Background"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground">
+
+        <!-- Rest of internal layout -->
+
+        <ImageView
+            android:id="@+id/IC_id_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="@color/colorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/id_panel" />
+
+        <TextView
+            android:id="@+id/IC_id_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/poppins_light"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="@string/w_default_id"
+            android:textAlignment="textStart"
+            android:textColor="@color/White_Text"
+            app:layout_constraintBottom_toBottomOf="@+id/IC_id_bg"
+            app:layout_constraintEnd_toEndOf="@+id/IC_id_bg"
+            app:layout_constraintStart_toStartOf="@+id/IC_id_bg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/IC_card_name"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/IC_card_type"
+            app:layout_constraintEnd_toStartOf="@+id/IC_card_sender"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/IC_id_bg">
+
+            <TextView
+                android:id="@+id/IC_wine_name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Wine_Name_Background"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_light"
+                android:lines="1"
+                android:text="@string/w_default_name"
+                android:textAlignment="center"
+                android:textColor="@color/White_Text"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/IC_card_sender"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/IC_card_type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/IC_card_name"
+            app:layout_constraintTop_toTopOf="@+id/IC_card_type">
+
+            <TextView
+                android:id="@+id/IC_wine_sender_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Wine_Sender_Background"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_light"
+                android:lines="1"
+                android:text="@string/w_default_sender"
+                android:textAlignment="center"
+                android:textColor="@color/White_Text"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/IC_card_type"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/IC_card_region"
+            app:layout_constraintEnd_toEndOf="@+id/IC_card_name"
+            app:layout_constraintStart_toStartOf="@+id/IC_card_name"
+            app:layout_constraintTop_toBottomOf="@+id/IC_card_name">
+
+            <TextView
+                android:id="@+id/IC_wine_type_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Wine_Type_Background"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_light"
+                android:lines="1"
+                android:text="@string/w_default_type"
+                android:textAlignment="center"
+                android:textColor="@color/White_Text"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/IC_card_region"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/IC_card_year"
+            app:layout_constraintEnd_toEndOf="@+id/IC_card_type"
+            app:layout_constraintStart_toStartOf="@+id/IC_card_type"
+            app:layout_constraintTop_toBottomOf="@+id/IC_card_type">
+
+            <TextView
+                android:id="@+id/IC_wine_region_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Wine_Region_Background"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_light"
+                android:lines="1"
+                android:text="@string/w_default_region"
+                android:textAlignment="center"
+                android:textColor="@color/White_Text"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/IC_card_year"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/IC_card_region"
+            app:layout_constraintStart_toStartOf="@+id/IC_card_region"
+            app:layout_constraintTop_toBottomOf="@+id/IC_card_region">
+
+            <TextView
+                android:id="@+id/IC_wine_year_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Wine_Maker_Background"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_light"
+                android:lines="1"
+                android:text="@string/w_default_year"
+                android:textAlignment="center"
+                android:textColor="@color/White_Text"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/IC_number_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:text="Aucune"
+            android:textAlignment="center"
+            android:textColor="@color/Black_Text"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/IC_card_sender"
+            app:layout_constraintEnd_toEndOf="@+id/IC_card_sender"
+            app:layout_constraintStart_toStartOf="@+id/IC_card_sender"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/IC_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:text="@string/w_default_price"
+            android:textAlignment="center"
+            android:textColor="@color/Red_Text"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/IC_card_region"
+            app:layout_constraintEnd_toEndOf="@+id/IC_card_sender"
+            app:layout_constraintStart_toStartOf="@+id/IC_card_sender"
+            app:layout_constraintTop_toTopOf="@+id/IC_card_region" />
+
+        <TextView
+            android:id="@+id/IC_rating_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:text="@string/w_default_rating"
+            android:textAlignment="center"
+            android:textColor="@color/Yellow_Text"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/IC_card_year"
+            app:layout_constraintEnd_toEndOf="@+id/IC_card_sender"
+            app:layout_constraintStart_toStartOf="@+id/IC_card_sender"
+            app:layout_constraintTop_toTopOf="@+id/IC_card_year" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addWineActivity">
+
+    <ImageView
+        android:id="@+id/am_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:translationZ="89dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/screen_background_dark_transparent" />
+
+    <EditText
+        android:id="@+id/am_find_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="48dp"
+        android:background="@color/White_Background"
+        android:fontFamily="@font/poppins_light"
+        android:hint="@string/aw_find_text"
+        android:lines="1"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textAlignment="textStart"
+        android:textSize="24sp"
+        android:translationZ="90dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/am_recycler"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:translationZ="90dp"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintEnd_toEndOf="@+id/am_find_bar"
+        app:layout_constraintStart_toStartOf="@+id/am_find_bar"
+        app:layout_constraintTop_toBottomOf="@+id/am_find_bar"
+        tools:listitem="@layout/wine_stats_card" />
+
+    <Button
+        android:id="@+id/am_buton_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClicked"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/am_buton_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClicked"
+        android:text="Type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/am_buton_name" />
+
+    <Button
+        android:id="@+id/am_buton_region"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClicked"
+        android:text="Region"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/am_buton_type" />
+
+    <Button
+        android:id="@+id/am_buton_sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClicked"
+        android:text="Sender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/am_buton_region" />
+
+    <Button
+        android:id="@+id/am_buton_maker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClicked"
+        android:text="Maker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/am_buton_sender" />
+</androidx.constraintlayout.widget.ConstraintLayout>

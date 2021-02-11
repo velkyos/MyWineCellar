@@ -1,0 +1,377 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "a1c1a2ce5ea27451ea5c52cd73ea969e",
+    "entities": [
+      {
+        "tableName": "wine_list",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`wine_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `wine_status` INTEGER NOT NULL, `wine_number` INTEGER NOT NULL, `wine_name` INTEGER NOT NULL DEFAULT 1, `wine_type` INTEGER NOT NULL DEFAULT 1, `wine_year` INTEGER NOT NULL, `wine_region` INTEGER NOT NULL DEFAULT 1, `wine_maker` INTEGER NOT NULL DEFAULT 1, `wine_price` INTEGER NOT NULL, `wine_sender` INTEGER NOT NULL DEFAULT 1, `wine_spoil` INTEGER NOT NULL, `wine_rating` INTEGER NOT NULL, FOREIGN KEY(`wine_name`) REFERENCES `wine_name_list`(`wine_name_id`) ON UPDATE NO ACTION ON DELETE SET DEFAULT , FOREIGN KEY(`wine_type`) REFERENCES `wine_type_list`(`wine_type_id`) ON UPDATE NO ACTION ON DELETE SET DEFAULT , FOREIGN KEY(`wine_region`) REFERENCES `wine_region_list`(`wine_region_id`) ON UPDATE NO ACTION ON DELETE SET DEFAULT , FOREIGN KEY(`wine_maker`) REFERENCES `wine_maker_list`(`wine_maker_id`) ON UPDATE NO ACTION ON DELETE SET DEFAULT , FOREIGN KEY(`wine_sender`) REFERENCES `wine_sender_list`(`wine_sender_id`) ON UPDATE NO ACTION ON DELETE SET DEFAULT )",
+        "fields": [
+          {
+            "fieldPath": "wine_id",
+            "columnName": "wine_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wine_status",
+            "columnName": "wine_status",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wine_number",
+            "columnName": "wine_number",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wine_name",
+            "columnName": "wine_name",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "1"
+          },
+          {
+            "fieldPath": "wine_type",
+            "columnName": "wine_type",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "1"
+          },
+          {
+            "fieldPath": "wine_year",
+            "columnName": "wine_year",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wine_region",
+            "columnName": "wine_region",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "1"
+          },
+          {
+            "fieldPath": "wine_maker",
+            "columnName": "wine_maker",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "1"
+          },
+          {
+            "fieldPath": "wine_price",
+            "columnName": "wine_price",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wine_sender",
+            "columnName": "wine_sender",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "1"
+          },
+          {
+            "fieldPath": "wine_spoil",
+            "columnName": "wine_spoil",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wine_rating",
+            "columnName": "wine_rating",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "wine_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_wine_list_wine_maker",
+            "unique": false,
+            "columnNames": [
+              "wine_maker"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wine_list_wine_maker` ON `${TABLE_NAME}` (`wine_maker`)"
+          },
+          {
+            "name": "index_wine_list_wine_name",
+            "unique": false,
+            "columnNames": [
+              "wine_name"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wine_list_wine_name` ON `${TABLE_NAME}` (`wine_name`)"
+          },
+          {
+            "name": "index_wine_list_wine_type",
+            "unique": false,
+            "columnNames": [
+              "wine_type"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wine_list_wine_type` ON `${TABLE_NAME}` (`wine_type`)"
+          },
+          {
+            "name": "index_wine_list_wine_region",
+            "unique": false,
+            "columnNames": [
+              "wine_region"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wine_list_wine_region` ON `${TABLE_NAME}` (`wine_region`)"
+          },
+          {
+            "name": "index_wine_list_wine_sender",
+            "unique": false,
+            "columnNames": [
+              "wine_sender"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wine_list_wine_sender` ON `${TABLE_NAME}` (`wine_sender`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "wine_name_list",
+            "onDelete": "SET DEFAULT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "wine_name"
+            ],
+            "referencedColumns": [
+              "wine_name_id"
+            ]
+          },
+          {
+            "table": "wine_type_list",
+            "onDelete": "SET DEFAULT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "wine_type"
+            ],
+            "referencedColumns": [
+              "wine_type_id"
+            ]
+          },
+          {
+            "table": "wine_region_list",
+            "onDelete": "SET DEFAULT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "wine_region"
+            ],
+            "referencedColumns": [
+              "wine_region_id"
+            ]
+          },
+          {
+            "table": "wine_maker_list",
+            "onDelete": "SET DEFAULT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "wine_maker"
+            ],
+            "referencedColumns": [
+              "wine_maker_id"
+            ]
+          },
+          {
+            "table": "wine_sender_list",
+            "onDelete": "SET DEFAULT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "wine_sender"
+            ],
+            "referencedColumns": [
+              "wine_sender_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "wine_name_list",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`wine_name_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `wine_name_name` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "wine_name_id",
+            "columnName": "wine_name_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wine_name_name",
+            "columnName": "wine_name_name",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "wine_name_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_wine_name_list_wine_name_name",
+            "unique": true,
+            "columnNames": [
+              "wine_name_name"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_wine_name_list_wine_name_name` ON `${TABLE_NAME}` (`wine_name_name`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "wine_type_list",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`wine_type_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `wine_type_name` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "wine_type_id",
+            "columnName": "wine_type_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wine_type_name",
+            "columnName": "wine_type_name",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "wine_type_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_wine_type_list_wine_type_name",
+            "unique": true,
+            "columnNames": [
+              "wine_type_name"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_wine_type_list_wine_type_name` ON `${TABLE_NAME}` (`wine_type_name`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "wine_region_list",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`wine_region_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `wine_region_name` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "wine_region_id",
+            "columnName": "wine_region_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wine_region_name",
+            "columnName": "wine_region_name",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "wine_region_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_wine_region_list_wine_region_name",
+            "unique": true,
+            "columnNames": [
+              "wine_region_name"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_wine_region_list_wine_region_name` ON `${TABLE_NAME}` (`wine_region_name`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "wine_maker_list",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`wine_maker_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `wine_maker_name` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "wine_maker_id",
+            "columnName": "wine_maker_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wine_maker_name",
+            "columnName": "wine_maker_name",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "wine_maker_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_wine_maker_list_wine_maker_name",
+            "unique": true,
+            "columnNames": [
+              "wine_maker_name"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_wine_maker_list_wine_maker_name` ON `${TABLE_NAME}` (`wine_maker_name`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "wine_sender_list",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`wine_sender_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `wine_sender_name` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "wine_sender_id",
+            "columnName": "wine_sender_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wine_sender_name",
+            "columnName": "wine_sender_name",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "wine_sender_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_wine_sender_list_wine_sender_name",
+            "unique": true,
+            "columnNames": [
+              "wine_sender_name"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_wine_sender_list_wine_sender_name` ON `${TABLE_NAME}` (`wine_sender_name`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a1c1a2ce5ea27451ea5c52cd73ea969e')"
+    ]
+  }
+}
